@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! Dev"
+          command: "echo Hello, World! Dev 123"
 
 
   Test-Prod:
