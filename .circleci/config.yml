@@ -30,19 +30,19 @@ jobs:
           command: "echo Hello, World! Master"  
 workflows:
   version: 2
-  build_and_deploy_dev:
+  build_and_deploy_dev2:
     jobs:
       - Test-Dev:
           filters:
             branches:
               only: develop
-  build_and_deploy_prod:
+  build_and_deploy_prod2:
     jobs:
       - Test-Prod:
           filters:
             branches:
               only: prod
-  build_and_deploy_master:
+  build_and_deploy_master2:
     jobs:
       - Test-Master:
           filters:
