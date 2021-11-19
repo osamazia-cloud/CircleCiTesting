@@ -1,5 +1,15 @@
 version: 2.1
 jobs:
+  Run-Test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Run Test1"
+
+
   Test-Dev:
     docker:
       - image: cimg/base:stable
@@ -7,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! This is Dev"
+          command: "echo Hello, World! Dev"
 
 
   Test-Prod:
@@ -28,17 +38,17 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World! Master"  
-workflows:
+workflows: 
   version: 2
-  build_and_deploy_dev2:
+  build_and_deploy_dev:
     jobs:
       - Test-Dev:
           filters:
             branches:
               only: develop
-  build_and_deploy_prod2:
+  build_and_deploy_prod:
     jobs:
-      - Test-Prod:
+      - Test-Prod:  
           filters:
             branches:
               only: prod
@@ -48,3 +58,12 @@ workflows:
           filters:
             branches:
               only: master
+  Run_Test:
+    jobs:
+      - Run-Test:
+        filters:
+              branches:
+                ignore:
+                  - develop
+                  - prod
+                  - master
