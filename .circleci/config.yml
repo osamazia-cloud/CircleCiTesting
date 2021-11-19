@@ -36,13 +36,13 @@ workflows:
           filters:
             branches:
               only: develop
-              build_and_deploy_prod:
+  build_and_deploy_prod:
     jobs:
       - Test-Prod:
           filters:
             branches:
               only: prod
-              build_and_deploy_master:
+  build_and_deploy_master:
     jobs:
       - Test-Master:
           filters:
