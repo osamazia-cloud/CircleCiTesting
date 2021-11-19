@@ -63,5 +63,7 @@ workflows:
       - Run-Test:
         filters:
               branches:
-                only: feature
-
+                ignore:
+                  - develop
+                  - prod
+                  - master
