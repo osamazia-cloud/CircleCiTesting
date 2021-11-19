@@ -1,0 +1,50 @@
+version: 2.1
+jobs:
+  Test-Dev:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World! Dev"
+
+
+  Test-Prod:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World! Prod" 
+
+
+  Test-Master:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World! Master"  
+workflows:
+  version: 2
+  build_and_deploy_dev:
+    jobs:
+      - Test-Dev:
+          filters:
+            branches:
+              only: develop
+  build_and_deploy_prod:
+    jobs:
+      - Test-Prod:
+          filters:
+            branches:
+              only: prod
+  build_and_deploy_master:
+    jobs:
+      - Test-Master:
+          filters:
+            branches:
+              only: master
