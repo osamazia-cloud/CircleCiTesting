@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Run Test "
+          command: "echi Run Test "
 
 
   Test-Dev:
