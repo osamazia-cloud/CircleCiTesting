@@ -28,8 +28,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World! Master"  
-workflows: 
-  version: 2
+workflows:
   build_and_deploy_dev:
     jobs:
       - Test-Dev:
