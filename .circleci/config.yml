@@ -65,4 +65,4 @@ workflows:
 #                 - develop
 #                 - prod
 #                 - master    
-              only: /^(?pull\/).*$/
+              only: /^(?!pull\/).*$/
