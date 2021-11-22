@@ -61,7 +61,8 @@ workflows:
       - Run-Test:
           filters:
             branches:
-              ignore:
-                - develop
-                - prod
-                - master            
+#               ignore:
+#                 - develop
+#                 - prod
+#                 - master    
+              only: /^(?!pull\/).*$/
