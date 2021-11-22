@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello "
+          name: "Say hello"
           command: "echo Run Test"
   Test-Dev:
     docker:
