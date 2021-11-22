@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Run Test"
+          name: "Say hello "
+          command: "echo Run T est"
   Test-Dev:
     docker:
       - image: cimg/base:stable
