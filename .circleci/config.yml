@@ -60,12 +60,9 @@ workflows:
     jobs:
       - Run-Test:
           filters:
-#             branches:
+            branches:
 #               ignore:
 #                 - develop
 #                 - prod
 #                 - master    
-#               only: /^(pull\/).*$/
-            prs:
-              ignore:
-                - master
+              only: /^(pull\/).*$/
