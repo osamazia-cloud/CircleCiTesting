@@ -52,8 +52,8 @@ workflows:
     jobs:
       - Run-Test:
           filters:
-              branches:
-                ignore:
-                  - develop
-                  - prod
-                  - master            
+            branches:
+              ignore:
+                - develop
+                - prod
+                - master            
