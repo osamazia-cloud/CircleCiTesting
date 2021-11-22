@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello  "
+          name: "Say hello"
           command: "echo Hello, World! Dev"
 
 
@@ -42,12 +42,18 @@ workflows:
           filters:
             branches:
               only: prod
-  build_and_deploy_master2:
+  build_and_deploy_master:
     jobs:
       - Test-Master:
           filters:
             branches:
-              ignore:
+              only: master
+  Run_Test:
+    jobs:
+      - Run-Test:
+        filters:
+              branches:
+                ignore:
                   - develop
                   - prod
-                  - master
+                  - master            
