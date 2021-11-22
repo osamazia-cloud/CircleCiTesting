@@ -1,5 +1,13 @@
 version: 2.1
 jobs:
+  Run-Test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Run Test"
   Test-Dev:
     docker:
       - image: cimg/base:stable
