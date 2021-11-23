@@ -56,16 +56,16 @@ workflows:
           filters:
             branches:
               only: master
-  Run_Test:
-    jobs:
-      - Run-Test:
-          filters:
-#             branches:
+#   Run_Test:
+#     jobs:
+#       - Run-Test:
+#           filters:
+# #             branches:
+# #               ignore:
+# #                 - develop
+# #                 - prod
+# #                 - master    
+# #               only: /^(pull\/).*$/
+#             prs:
 #               ignore:
-#                 - develop
-#                 - prod
-#                 - master    
-#               only: /^(pull\/).*$/
-            prs:
-              ignore:
-                - master
+#                 - master
