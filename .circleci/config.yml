@@ -37,7 +37,7 @@ jobs:
       - run: sleep 150
       - run:
           name: "Say hello"
-          command: "echo Hello, World! Master"  
+          command: "echo Hello, World! Master "  
 workflows:
   version: 2
   build_and_deploy_dev2:
