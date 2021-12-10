@@ -13,6 +13,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - run: sleep 150
       - run:
           name: "Say hello "
           command: "echo Hello, World! Dev"
