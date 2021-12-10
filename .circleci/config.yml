@@ -8,7 +8,7 @@ jobs:
       - run: sleep 150
       - run:
           name: "Say hello"
-          command: "echo Hello, World! Dev"
+          command: "echo Hello, World! Dev "
 
 
   Test-Prod:
