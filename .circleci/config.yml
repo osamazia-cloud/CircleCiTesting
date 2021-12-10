@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello "
-          command: "echo Run T est"
+          command: "echo Run Test"
   Test-Dev:
     docker:
       - image: cimg/base:stable
@@ -35,7 +35,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! Master "  
+          command: "echo Hello, World! Master"  
 workflows:
   version: 2
   build_and_deploy_dev2:
