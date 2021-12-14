@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello "
-          command: "echo Run Test "
+          command: "echo Run Test"
           
 workflows:
   version: 2
