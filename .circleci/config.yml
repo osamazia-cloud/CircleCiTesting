@@ -8,66 +8,24 @@ jobs:
       - run:
           name: "Say hello "
           command: "echo Run Test"
-  Test-Dev:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run: sleep 150
-      - run:
-          name: "Say hello "
-          command: "echo Hello, World! Dev"
-
-
-  Test-Prod:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World! Prod" 
-
-
-  Test-Master:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run: sleep 150
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World! Master"  
+          
 workflows:
   version: 2
   build_and_deploy_dev2:
     jobs:
-      - Test-Dev:
+      - Run-Test:
           filters:
             branches:
               only: develop
   build_and_deploy_prod2:
     jobs:
-      - Test-Prod:
+      - Run-Test:
           filters:
             branches:
               only: prod
   build_and_deploy_master:
     jobs:
-      - Test-Master:
+      - Run-Test:
           filters:
             branches:
               only: master
-#   Run_Test:
-#     jobs:
-#       - Run-Test:
-#           filters:
-# #             branches:
-# #               ignore:
-# #                 - develop
-# #                 - prod
-# #                 - master    
-# #               only: /^(pull\/).*$/
-#             prs:
-#               ignore:
-#                 - master
