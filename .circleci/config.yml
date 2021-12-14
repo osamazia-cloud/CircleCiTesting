@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!  Dev tyest  iudiusdf"
+          command: "echo Hello, World!  Dev tyest  iudiusdf fdgfd"
 
 workflows:
   version: 2
