@@ -13,14 +13,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    env:
-      ENV: Enable
     steps:
-      - uses: actions/checkout@v2
       - name: Try to fail
-        if: ${{ env.ENV == 'Enable' }}
+        if: ${{ secrets.RUN_CI_DEPLOY == 'false' }}
         run: exit 1
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
