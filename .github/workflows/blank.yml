@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Try to fail
-        if: ${{ env.ENV == 'Enable1' }}
+        if: ${{ env.ENV == 'Enable' }}
         run: exit 1
       - name: Run a multi-line script
         run: |
