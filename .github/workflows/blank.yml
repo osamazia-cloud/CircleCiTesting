@@ -3,9 +3,6 @@
 name: CI
 
 on:
-#   push:
-#     branches:
-#       - master
   pull_request:
     branches: [ master ]
 
@@ -19,3 +16,4 @@ jobs:
       - name: Try to fail
         if: ${{ env.check_deploy != 'false' }}
         run: exit 1
+ 
