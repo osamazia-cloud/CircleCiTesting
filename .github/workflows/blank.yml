@@ -16,3 +16,4 @@ jobs:
       - name: Try to fail
         if: ${{ env.check_deploy == 'false' }}
         run: exit 1
+ 
