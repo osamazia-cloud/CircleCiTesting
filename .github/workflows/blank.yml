@@ -17,9 +17,6 @@ jobs:
       ENV: Enable
     steps:
       - uses: actions/checkout@v2
-
-      - name: Run a one-line script
-        run: make --version
       - name: Run a multi-line script
         if: ${{ env.ENV == 'Enable1' }}
         run: |
