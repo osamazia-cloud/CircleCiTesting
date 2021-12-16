@@ -16,6 +16,7 @@ jobs:
     env:
       check_deploy: ${{ secrets.RUN_CI_DEPLOY }}
     steps:
+      - uses: actions/checkout@v2
       - name: Try to fail
         if: ${{ env.check_deploy == 'false' }}
         run: exit 1
