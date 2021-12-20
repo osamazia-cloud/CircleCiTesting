@@ -3,6 +3,7 @@ jobs:
   Run-Test:
     docker:
       - image: cimg/base:stable
+    resource_class: large  
     steps:
       - checkout
       - run:
